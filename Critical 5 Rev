@@ -1,0 +1,42 @@
+# Request user for how many years
+number_years = int(input('Input number of years between 1-15'))
+
+# Verify Input
+if number_years <=0 and 15:
+    print('Input enter a number between 1-15')
+
+# Activate sum of rainfall and the number of months
+sum_rainfall = 0.0
+number_months = 0
+
+#Iterate over the number of years
+for year in range(number_years):
+
+    #Iterate over the number of months in a year
+    for month in range (12):
+        #Request user for rainfall for the month
+        rainfall = float(input(f"Input the rainfall for month {month + 1}  in year {year + 1}: "))
+
+    #Verify user input
+    if rainfall < 0.0:
+        print('Invalid Input')
+        rainfall = float(input(f"Input the rainfall for month {month + 1} in year {year + 1} again: "))
+
+    #Add rainfall for month to total
+    sum_rainfall += rainfall
+
+    # Increment the number of months.
+    number_months += 1
+
+    #Calculate the average rainfall per month.
+    average_rainfall = sum_rainfall / number_months
+
+    #Show answers
+    print(f"Total rainfall: {sum_rainfall:.2f} inches")
+    print(f"Average rainfall per month: {average_rainfall:.2f} inches")
+
+    #The results
+    print ('Scenario')
+    print ('Scenario 2')
+    print ('Scenario 3')
+
